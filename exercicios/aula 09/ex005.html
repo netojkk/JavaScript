@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM JS</title>
+    <style>
+        body {
+            background-color: rgb(177, 101, 248);
+            color: white;
+            text-align: center;
+        }
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>inicio do uso de DOM</h1>
+    <p>
+        Aprendendo <strong>DOM</strong> em Js (JavaScript)
+    </p>
+    <p>
+        tá maluco
+    </p>
+
+    <div>Clique em mim</div>
+
+    <script>
+        var p2 = window.document.getElementsByTagName('p')[0]
+        window.document.write(('Observe a semelhança: ') + p2.innerHTML)
+
+        
+    </script>
+</body>
+</html>
