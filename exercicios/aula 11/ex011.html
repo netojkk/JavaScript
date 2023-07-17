@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            font: normal 18px Arial;
+
+
+            background: rgb(196, 32, 196);
+            color: white;
+        }
+        .all {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            
+            align-items: center;
+        }
+        h1 {
+            padding: 50px;
+        }
+        #res {
+            padding-top: 100px;
+            color: rgb(228, 228, 228);
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+    
+        <h1>Onde você vive?</h1>
+    
+    
+            <div class="buttons">
+                Qual país você nasceu? <input id="ip" type="text" placeholder="Brasil ou Outro">
+                <input type="button" value="Enviar" onclick="nacio()">
+            </div>
+    
+             <div id="res"> Resultado: </div>
+    
+    </div>
+        
+
+     <script>
+
+        function nacio() {
+            var pp = document.getElementById('ip')
+            var res = document.querySelector('div#res')
+
+            var país = String(pp.value)
+            
+            if (país == 'Brasil'){
+                res.innerHTML +=`<p>Se vocé mora no <strong>${país}</strong> então...</p>`
+            }else {
+                res.innerHTML += `<p>Se você mora em <strong>${país}</strong> país</p>`
+            }
+
+
+            if ( país == 'Brasil') {
+               res.innerHTML += '<p>Você é brasileiro</p>'
+            }else {
+                res.innerHTML += `Você é estrangeiro`
+            }
+            
+        }
+
+     </script>
+</body>
+</html>
