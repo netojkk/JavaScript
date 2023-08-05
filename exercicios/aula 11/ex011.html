@@ -52,18 +52,14 @@
 
             var país = String(pp.value)
             
-            if (país == 'Brasil'){
-                res.innerHTML +=`<p>Se vocé mora no <strong>${país}</strong> então...</p>`
+            if (país == 'Brasil' || país == 'brasil'){
+                res.innerHTML +=`<p>Morando no <strong>${país}</strong> você é brasileiro.</p>`
             }else {
-                res.innerHTML += `<p>Se você mora em <strong>${país}</strong> país</p>`
+                res.innerHTML += `<p>Morando em <strong>${país}</strong> você é estrangeiro. </p>`
             }
 
 
-            if ( país == 'Brasil') {
-               res.innerHTML += '<p>Você é brasileiro</p>'
-            }else {
-                res.innerHTML += `Você é estrangeiro`
-            }
+            
             
         }
 

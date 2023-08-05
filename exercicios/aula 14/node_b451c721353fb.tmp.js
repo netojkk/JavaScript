@@ -24,7 +24,7 @@ if (numberi.length == 0 || numberm.length == 0 || pulo.length == 0){
         for (let c = ni; c <= nu; c += p){
              console.log(`E contando: ${c}`)
     }}
-     else if (n > nu) {
+     else {
         for(let c = n; c >= nu; c-= p){
             console.log(`${c} `)
         
