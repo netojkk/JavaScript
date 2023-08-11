@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+
+<body>
+    <header>
+        <h1>Tabuada meia boca</h1>
+    </header>
+    <main>
+
+
+        <input type="submit" value="Tabuada" onclick="criarTabuada()">
+        <input type="button" value="Limpar" onclick="limparTabuada()">
+
+    </main>
+    <div class="res">
+
+    </div>
+    <script>
+        /*
+            PASSO A PASSO
+
+            criar a variavel que vai receber o num ligado com o HTML
+
+            criar uma variavel para a msg (fora das functions)
+
+            criar um loop para as tabuadas com uma variavel de indice
+
+            colocar no inner.HTML vinculado com o HTML e mostrar na sua tela
+
+            SEGUNDA FUNCTION
+
+            usar a let da mensagem e add uma string vazia
+
+            colocar no inner.HTML novamente vinculado com o HTML e mostrar na sua tela.
+
+        */
+        var res = document.querySelector('.res')
+
+        let msg = ''
+        //criar uma let com mensagem para facilitar para o HTML
+
+        function criarTabuada() {
+            var n = Number(prompt('Escolha um número e terá a sua tabuada!'))
+            //pegar um número e converte-lo
+
+            limparTabuada()
+            for (let i = 0; i <= 10; i++) {
+                msg += `${n} x ${i} = ${n * i} <br>`
+            }
+            // criar uma let de indicie e um loop
+            res.innerHTML = msg
+        }
+
+        function limparTabuada() {
+            msg = ''
+            res.innerHTML = msg
+        }
+
+    </script>
+</body>
+
+</html>
